@@ -61,7 +61,7 @@ public class LoginTest {
         loginPOM.ingresarAplicacion(nomUsuario, password);
 
         assertEquals("Validar titulo en la pagina home",
-                "Artistas Mas Destacados Del 2018",
+                "Artistas Mas Destacados Del 2019",
                 homePOM.getMensajeHome());
     }
 }

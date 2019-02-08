@@ -1,5 +1,6 @@
 package soundmusic.selenium.POM.EmpresaDifusora;
 
+import java.sql.Date;
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -27,7 +28,7 @@ public class EmpresasDifusoraListar {
     }
 
     public void clickRegistrarEmpresa() {
-        driver.findElement(btnRegistrar);
+        driver.findElement(btnRegistrar).click();
     }
 
     public void clickRegresar() {
@@ -39,7 +40,7 @@ public class EmpresasDifusoraListar {
         List<WebElement> ultimaFilaTablaEmpresas = UltimaFila();
 
         nuevaEmpresa.setNombre(ultimaFilaTablaEmpresas.get(0).getText());
-
+         nuevaEmpresa.setFechaCreacion(Date.valueOf(ultimaFilaTablaEmpresas.get(2).getText()));
         return nuevaEmpresa;
     }
 

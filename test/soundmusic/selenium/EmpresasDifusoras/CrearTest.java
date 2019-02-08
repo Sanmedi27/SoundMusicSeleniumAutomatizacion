@@ -62,7 +62,9 @@ public class CrearTest {
         password = "admin";
 
         empresaEsperado = new EmpresaDifusora();
-        empresaEsperado.setNombre("MusicTunes");       
+        empresaEsperado.setNombre("MusicTunes");  
+        empresaEsperado.getTipoActividad().setTipoActividad("DESCARGAS");
+        empresaEsperado.getCostoOperacion().setCostoPorOperacion(12);
 
         empresaActual = new EmpresaDifusora();
     }
